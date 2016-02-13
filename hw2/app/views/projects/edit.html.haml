@@ -1,0 +1,25 @@
+-# edit.html.haml using partial
+
+%h1 Edit Existing Project Task
+
+= form_tag project_path(@project), :method => :put do
+
+  = label :project, :title, 'Title'
+  = text_field :project, 'title'
+
+  = label :project, :description, 'Description'
+  = text_field :project, 'description'
+
+  = label :project, :extended_description, 'extended_description'
+  = text_area :project, 'extended_description'
+
+  = label :project, :user, 'Assigned User'
+  = select :project, :user, ['Coulson','May','Ward','Skye','Fitz', 'Simmons']
+
+  = label :project, :due_date, 'Due Date'
+  = date_select :project, :due_date
+
+  = submit_tag 'Update Project Task Info'
+
+%br
+=link_to "Back", project_path(@project)

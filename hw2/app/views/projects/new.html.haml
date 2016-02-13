@@ -1,0 +1,22 @@
+%h1 Create New Project Task
+
+= form_tag projects_path do
+
+  = label :project, :title, 'Title'
+  = text_field :project, 'title'
+
+  = label :project, :description, 'Description'
+  = text_field :project, 'description'
+
+  = label :project, :extended_description, 'Extended Description'
+  = text_area :project, 'extended_description'
+  
+  = label :project, :user, 'Assigned User'
+  = select :project, :user, ['Coulson','May','Ward','Skye','Fitz', 'Simmons']
+
+  = label :project, :due_date, 'Due Date'
+  = date_select :project, :due_date
+
+  = submit_tag 'Save Changes'
+
+=link_to "Back", projects_path
