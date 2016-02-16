@@ -8,6 +8,31 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
+#     @all_users = Project.pluck(:user)
+#     @selected_users = params[:users] || session[:users] || {}
+#     category = params[:category] 
+#     case category
+#     when "title"
+#       order_by_category, @title_header = {:order => :title}, "hilite"
+#     when "description"
+#       order_by_category, @details_header = {:order => :description}, "hilite"
+#     when "user"
+#       order_by_category, @user_header = {:order => :user}, "hilite"
+#     when "due_date"
+#       order_by_category, @due_date_header = {:order => :due_date}, "hilite"
+#     end
+#     
+#     if @selected_users == {}
+#       @selected_users = Hash[@all_users.map{|user| [user, user]}]
+#     end
+#     
+#     if params[:category] != session[:category]
+#       session[:category] = category
+#       flash.keep
+#       redirect_to :category => category, :users => @selected_users and return
+#     end
+
+#     @projects = Project.find(@selected_users.keys, order_by_category)
   end
 
   def new

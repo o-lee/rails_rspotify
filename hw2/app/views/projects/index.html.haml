@@ -1,13 +1,21 @@
 -#  This file is app/views/projects/index.html.haml
 %h1 All Project Tasks
 
+  = form_tag projects_path, :method => :get, :id => "users_form' do
+  Include:
+  - @all_users.each do |user|
+    = user
+    = check_box_tag "users[#{user}]",1,@selected_users.include?(user), :id => "users_#{user}"
+    
+  = submit_tag 'Filter', :id => "users_submit"
+
 %table#projects
   %thead
     %tr
-      %th Task Title
-      %th Task Details
-      %th Assigned User
-      %th Due Date
+      %th{:class => "Table_Header #{@title_header}"}= link_to "Task Title", projects_path(:category => "title", :users => @selected_users), :id => "title_header"
+      %th{:class => "Table_Header #{@details_header}"}= link_to "Task Details", projects_path(:category => "description", :users => @selected_users), :id => "details_header"
+      %th{:class => "Table_Header #{@user_header}"}= link_to "Assigned User", projects_path(:category => "user", :users => @selected_users), :id => "user_header"
+      %th{:class => "Table_Header #{@due_date_header}"}= link_to "Due Date", projects_path(:category => "due_date", :users => @selected_users), :id => "due_date_header"
 
   %tbody
     - @projects.each do |project|
