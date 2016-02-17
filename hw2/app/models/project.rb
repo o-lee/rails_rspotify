@@ -1,10 +1,5 @@
 class Project < ActiveRecord::Base
-  def self.all_users
-    all_projects = Project.all
-    all_users = []
-    all_projects.each do |project|
-      all_users.push(project.user)
-    end
-    return all_users.uniq.sort
+ def self.all_users
+   %w(Coulson Ward May Skye Fitz Simmons)
   end
 end
