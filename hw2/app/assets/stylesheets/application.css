@@ -51,8 +51,8 @@ table#projects th, table#projects td {
   border-bottom: 1px solid grey;
 }
 table#projects th.hilite {
-  background-color: #707070;
-  color: white;
+  background-color: yellow;
+ 
 }
 #notice #warning {
   background: rosybrown;

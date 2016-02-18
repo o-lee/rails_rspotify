@@ -8,6 +8,16 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
+
+    category = params[:category] || session[:category]
+    case category
+      when 'title'
+      @projects = Project.order(category)
+      @title_header = 'hilite'
+      when 'due_date'
+      @projects = Project.order(category)
+      @due_date_header = 'hilite'
+    end
   end
 
   def new

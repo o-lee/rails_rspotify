@@ -4,10 +4,10 @@
 %table#projects
   %thead
     %tr
-      %th Task Title
+      %th{:class => @title_header, :id => 'title_header'}= link_to 'Task Title', projects_path(:category => 'title')
       %th Task Details
       %th Assigned User
-      %th Due Date
+      %th{:class => @due_date_header, :id => 'due_date_header'}= link_to 'Due Date', projects_path(:category => 'due_date')
 
   %tbody
     - @projects.each do |project|
