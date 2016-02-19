@@ -7,26 +7,26 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    category = params[:category] || session[:category]
+    category = params[:category] || session[:category] #create variable to sort by clicking on headers
     case category
       when 'title'
        @projects = Project.order(category)
-       @title_header = 'hilite'
+       @title_header = 'hilite' # sort and hilite by title
       when 'due_date'
        @projects = Project.order(category)
-       @due_date_header = 'hilite'
+       @due_date_header = 'hilite' # sort and hilite by due_date
       else
-      @projects = Project.all
+      @projects = Project.all # no category selected, display table unsorted
     end
 
-    @all_users = Project.all_users
-    @selected_users = params[:users] || session[:users] || {}
+    @all_users = Project.all_users #create a vairable to store users selected by check box
+    @selected_users = params[:users] || session[:users] || {} 
     
     if @selected_users == {}
-      @selected_users = Hash[@all_users.map {|user| [user, user]}]
+      @selected_users = Hash[@all_users.map {|user| [user, user]}] # if all users are deselected, select all
     end
     
-    if params[:category] != session[:category]
+    if params[:category] != session[:category] #preserve users and sort for duration of session
       session[:category] = category
       flash.keep
       redirect_to :category => category, :users => @selected_users and return
@@ -38,9 +38,8 @@ class ProjectsController < ApplicationController
       redirect_to :category => category, :users => @selected_users and return
     end
     
-    @projects = Project.order(category)
+    @projects = Project.order(category) # sort by category preserving selected users
     @projects = @projects.where(:user => params[:users].keys) if params[:users].present?
-    logger.debug "Project #{@projects}"
   end
 
   def new
@@ -50,7 +49,6 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.create!(project_params)
     flash[:notice] = "#{@project.title} was successfully created."
-    logger.debug "Project #{@projects}"
     redirect_to projects_path
   end
 
