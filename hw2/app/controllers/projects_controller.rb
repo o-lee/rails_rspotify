@@ -7,17 +7,40 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = Project.all
-
     category = params[:category] || session[:category]
     case category
       when 'title'
-      @projects = Project.order(category)
-      @title_header = 'hilite'
+       @projects = Project.order(category)
+       @title_header = 'hilite'
       when 'due_date'
-      @projects = Project.order(category)
-      @due_date_header = 'hilite'
+       @projects = Project.order(category)
+       @due_date_header = 'hilite'
+      else
+      @projects = Project.all
     end
+
+    @all_users = Project.all_users
+    @selected_users = params[:users] || session[:users] || {}
+    
+    if @selected_users == {}
+      @selected_users = Hash[@all_users.map {|user| [user, user]}]
+    end
+    
+    if params[:category] != session[:category]
+      session[:category] = category
+      flash.keep
+      redirect_to :category => category, :users => @selected_users and return
+    end
+    if params[:users] != session[:users] and @selected_users != {}
+      session[:category] = category
+      session[:users] = @selected_users
+      flash.keep
+      redirect_to :category => category, :users => @selected_users and return
+    end
+    
+    @projects = Project.order(category)
+    @projects = @projects.where(:user => params[:users].keys) if params[:users].present?
+    logger.debug "Project #{@projects}"
   end
 
   def new
@@ -27,6 +50,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.create!(project_params)
     flash[:notice] = "#{@project.title} was successfully created."
+    logger.debug "Project #{@projects}"
     redirect_to projects_path
   end
 
