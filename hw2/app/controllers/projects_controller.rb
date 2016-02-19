@@ -11,12 +11,12 @@ class ProjectsController < ApplicationController
     case category
       when 'title'
        @projects = Project.order(category)
-       @title_header = 'hilite' # sort and hilite by title
+       @title_header = 'hilite' # sort and hilite header by title
       when 'due_date'
        @projects = Project.order(category)
-       @due_date_header = 'hilite' # sort and hilite by due_date
+       @due_date_header = 'hilite' # sort and hilite header by due_date
       else
-      @projects = Project.all # no category selected, display table unsorted
+       @projects = Project.all # no category selected, display table unsorted
     end
 
     @all_users = Project.all_users #create a vairable to store users selected by check box
