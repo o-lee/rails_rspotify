@@ -1,0 +1,29 @@
+-#  This file is app/views/projects/index.html.haml
+%h1 All Project Tasks
+
+= form_tag projects_path, :method => :get, :id => 'users_form' do
+  = hidden_field_tag ":title_sort", true if @title_header
+  = hidden_field_tag ":date_sort", true if @date_header
+  Include: 
+  - @all_users.each do |user|
+    = user
+    = check_box_tag "users[#{user}]", 1, @selected_users.include?(user), :id => "users_#{user}"
+  = submit_tag 'Refresh', :id => 'users_submit'
+
+%table#projects
+  %thead
+    %tr
+      %th{:class => @title_header}=link_to "Task Title", projects_path(:sort => 'title', :users => @selected_users), :id => 'title_header'
+      %th Task Details
+      %th Assigned User
+      %th{:class => @date_header}=link_to "Due Date", projects_path(:sort => 'date', :users => @selected_users), :id => 'date_header'
+
+  %tbody
+    - @projects.each do |project|
+      %tr
+        %td= project.title 
+        %td= link_to "More about #{project.title}", project_path(project)
+        %td= project.user
+        %td= project.due_date.to_formatted_s(:long)
+
+= link_to 'Add new project task', new_project_path
