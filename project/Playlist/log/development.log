@@ -1,0 +1,191 @@
+
+
+Started GET "/" for ::1 at 2016-02-25 13:02:56 -0700
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ensign/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ensign/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ensign/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ensign/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /home/ensign/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/ensign/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ensign/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.6ms)
+  Rendered /home/ensign/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/ensign/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ensign/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ensign/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/ensign/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (20.6ms)
+  Rendered /home/ensign/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ensign/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ensign/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (48.7ms)
+  [1m[36m (36.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (7.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateProjects (20150928231900)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/ensign/assignments/project/Playlist/db/migrate/20150928231900_create_projects.rb:11)
+  [1m[35m (0.9ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "user" varchar, "description" text, "due_date" datetime, "extended_description" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150928231900"]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("title", "user", "due_date", "description", "extended_description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Create new user story"], ["user", "Coulson"], ["due_date", "2014-10-08 00:00:00.000000"], ["description", "As a user, I want to be able to create a new user story, so that I can later assign individual features (contained within the user story) to teammates"], ["extended_description", "Note that a user story may include multiple features, where each feature contains  one or more scenarios. A scenario contains a 3-8 steps."], ["created_at", "2016-02-25 20:04:49.803996"], ["updated_at", "2016-02-25 20:04:49.803996"]]
+  [1m[35m (40.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "projects" ("title", "user", "due_date", "description", "extended_description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Create new feature"], ["user", "Fitz"], ["due_date", "2014-10-09 00:00:00.000000"], ["description", "As a project manager, I want to create features, so that I can assign individual features to my project team"], ["extended_description", "A feature is one element of a user story.  It is made up of multiple scenarios, each of which contains 3-8 steps."], ["created_at", "2016-02-25 20:04:49.847408"], ["updated_at", "2016-02-25 20:04:49.847408"]]
+  [1m[36m (4.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "projects" ("title", "user", "due_date", "description", "extended_description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Create a new scenario"], ["user", "Simmons"], ["due_date", "2014-10-09 00:00:00.000000"], ["description", "As a project manager, I want to create a scenario, so that I can assign individual scenarios for my project team to implement"], ["extended_description", "A scenario is one aspect of a feature. It should be able to be completed in 3-8 steps."], ["created_at", "2016-02-25 20:04:49.853353"], ["updated_at", "2016-02-25 20:04:49.853353"]]
+  [1m[35m (5.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "projects" ("title", "user", "due_date", "description", "extended_description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "View all scenarios, features, and user stories"], ["user", "Simmons"], ["due_date", "2014-10-09 00:00:00.000000"], ["description", "As a team member, I want to be able to see existing scenarios, features, and user stories, so that I can accept scenarios or groups of scenarios (perhaps full features)"], ["extended_description", "No extra data"], ["created_at", "2016-02-25 20:04:49.861754"], ["updated_at", "2016-02-25 20:04:49.861754"]]
+  [1m[36m (11.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "projects" ("title", "user", "due_date", "description", "extended_description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Edit scenarios, features, and user stories"], ["user", "May"], ["due_date", "2014-10-10 00:00:00.000000"], ["description", "As a project manager, I want to edit existing scenarios, features, and user stories, so that I can update all tasks based on new customer feedback, modify due dates, and reassign ownership"], ["extended_description", "No extra data at this time"], ["created_at", "2016-02-25 20:04:49.879362"], ["updated_at", "2016-02-25 20:04:49.879362"]]
+  [1m[35m (9.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "projects" ("title", "user", "due_date", "description", "extended_description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Edit scenarios, features, and user stories"], ["user", "May"], ["due_date", "2014-10-10 00:00:00.000000"], ["description", "As a team member, I want to edit existing scenarios, features, and user stories, so that I can update all tasks based on new customer feedback, modify due dates, and relinquish ownership of tasks"], ["extended_description", "If the project member realizes that they cannot complete a task, they should be able to release the task. Notifications and notes should be sent to the team to let them know there is an issue"], ["created_at", "2016-02-25 20:04:49.892681"], ["updated_at", "2016-02-25 20:04:49.892681"]]
+  [1m[36m (8.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "projects" ("title", "user", "due_date", "description", "extended_description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Send notifications to the team"], ["user", "Fitz"], ["due_date", "2014-10-11 00:00:00.000000"], ["description", "As a team member, I want to send an announcement to the team about task completion, task hold-ups, and information that is needed, so that I can let my team members know status updates and let them know when issues arise that may jeoporadize the task."], ["extended_description", "Notifications should be sent via email to team members. All notifications will be sent to all team members."], ["created_at", "2016-02-25 20:04:49.903527"], ["updated_at", "2016-02-25 20:04:49.903527"]]
+  [1m[35m (6.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "projects" ("title", "user", "due_date", "description", "extended_description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Send notes/updates to the team"], ["user", "Fitz"], ["due_date", "2014-10-08 00:00:00.000000"], ["description", "As a team member, I want to be able to write notes about each task while I am completing it, so that I can let my team members know, so that my team members know that I am making progress and what decisions and issues I have run into along the way"], ["extended_description", "Notes will be displayed on screen only.  All team members can see all notes upon logging into the system."], ["created_at", "2016-02-25 20:04:49.912778"], ["updated_at", "2016-02-25 20:04:49.912778"]]
+  [1m[36m (5.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for ::1 at 2016-02-25 13:05:01 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/projects" for ::1 at 2016-02-25 13:05:01 -0700
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 1051ms (Views: 1042.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-754c27f1669e123258fb38cb19ab64bdb22ffcc589cf9fd007f6b4f14de11700.css?body=1" for ::1 at 2016-02-25 13:05:03 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-02-25 13:05:03 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-02-25 13:05:03 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-25 13:05:03 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-02-25 13:05:03 -0700
+
+
+Started GET "/assets/color.jpg" for ::1 at 2016-02-25 13:05:03 -0700
+
+
+Started GET "/projects" for ::1 at 2016-02-25 13:12:53 -0700
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 48ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-754c27f1669e123258fb38cb19ab64bdb22ffcc589cf9fd007f6b4f14de11700.css?body=1" for ::1 at 2016-02-25 13:12:54 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-02-25 13:12:54 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-02-25 13:12:54 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-25 13:12:54 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-02-25 13:12:54 -0700
+
+
+Started GET "/projects" for ::1 at 2016-02-25 13:25:15 -0700
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 51ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e97266adb3f7d4c7b5351f77c1c12b5c5904bca42f95e9a689a62bd97feb0c51.css?body=1" for ::1 at 2016-02-25 13:25:15 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-02-25 13:25:15 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-25 13:25:15 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-02-25 13:25:15 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-02-25 13:25:15 -0700
+
+
+Started GET "/assets/color.jpg" for ::1 at 2016-02-25 13:25:15 -0700
+
+
+Started GET "/projects" for ::1 at 2016-02-25 13:28:23 -0700
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 49ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-9c3501069fbf1ec5df4b0336ad2ae088af832fa8b9710ef241be2bfb2786bb05.css?body=1" for ::1 at 2016-02-25 13:28:23 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-02-25 13:28:23 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-25 13:28:23 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-02-25 13:28:23 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-02-25 13:28:23 -0700
+
+
+Started GET "/assets/color.jpg" for ::1 at 2016-02-25 13:28:23 -0700
