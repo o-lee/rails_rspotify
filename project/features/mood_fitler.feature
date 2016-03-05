@@ -20,7 +20,6 @@ Feature: Generate Music by Current Mood
       Then I should see the mood list
       When I select "Chill"
       Then I should see "Renaissance"
-      And I should see an option to save the playlist
 
    Scenario: I want to generate a playlist from his account with an account
       Given I am on the user homepage
@@ -29,4 +28,3 @@ Feature: Generate Music by Current Mood
       Then I should see the mood list
       When I select "Happy"
       Then I should see "Dirty Little Secret"
-      And I should see an option to save the playlist
