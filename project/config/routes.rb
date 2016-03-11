@@ -14,6 +14,7 @@ ProjectManager::Application.routes.draw do
   #   resources :products
   resources :projects
   root :to => redirect('/projects')
+  get 'rest/:id', to: 'rest#show'
   # Sample resource route with options:
   #   resources :products do
   #     member do
