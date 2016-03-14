@@ -16,12 +16,12 @@ ActiveRecord::Schema.define(version: 20111119180638) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "projects", force: :cascade do |t|
+  create_table "playlist", force: :cascade do |t|
     t.string   "title"
-    t.string   "user"
-    t.text     "description"
-    t.datetime "due_date"
-    t.text     "extended_description"
+    t.string   "artist"
+    t.text     "genre"
+    t.text     "mood"
+    t.text     "activity"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

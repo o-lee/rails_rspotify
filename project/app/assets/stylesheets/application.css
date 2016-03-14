@@ -16,7 +16,7 @@ h2 {
 }
 
 #header {
-   text-align: right;
+    text-align: right;
 }
 
 #filter {
@@ -54,5 +54,5 @@ label[for="filter"] {
 }
 
 .no-close .ui-dialog-titlebar-close {
-  display: none;
+    display: none;
 }

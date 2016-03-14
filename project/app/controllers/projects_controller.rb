@@ -3,8 +3,14 @@ class ProjectsController < ApplicationController
   def show
     id = params[:id] # retrieve project task ID from URI route
     @project = Project.find(id) # look up project task by unique ID
-    # will render app/views/projects/show.<extension> by default
+
+    respond_to do |format|
+      format.html
+      format.js
+      format.json { render :json => @project.to_json }
+    end
   end
+
 
   def index
    sort = params[:sort] || session[:sort]

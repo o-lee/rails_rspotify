@@ -53,16 +53,21 @@ When /^(?:|I )press "([^"]*)"$/ do |button|
   click_button(button)
 end
 
-When /^(?:|I )follow "([^"]*)"$/ do |link|
-  click_link(link)
+When /^(?:|I )follow "([^"]*)" by "([^"]*)"$/ do |link, num|
+  page.select("#{num}", :from => 'filter' )
 end
 
-When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
-  fill_in(field, :with => value)
+#When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
+ # fill_in(field, :with => value)
+#end
+
+When(/^I select the option containing "([^\"]*)" in the autocomplete$/) do |text|
+  locate("li:contains('#{text}')").click
 end
+
 
 When /^(?:|I )fill in "([^"]*)" for "([^"]*)"$/ do |value, field|
-  fill_in(field, :with => value)
+  page.execute_script %Q{ $('.ui-autocomplete-input input:contains("#{value}")').trigger("mouseenter").click(); }
 end
 
 # Use this to fill in an entire form with data from a table. Example:
@@ -108,6 +113,10 @@ Then /^(?:|I )should see "([^"]*)"$/ do |text|
   else
     assert page.has_content?(text)
   end
+end
+
+Then /^(?:|I )should see the following "([^"]*)"$/ do |text|
+  find('input[placeholder="I\'m going to..."]')
 end
 
 Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
@@ -226,7 +235,7 @@ Then /^the "([^"]*)" checkbox(?: within (.*))? should not be checked$/ do |label
     end
   end
 end
- 
+
 Then /^(?:|I )should be on (.+)$/ do |page_name|
   current_path = URI.parse(current_url).path
   if current_path.respond_to? :should
@@ -240,8 +249,8 @@ Then /^(?:|I )should have the following query string:$/ do |expected_pairs|
   query = URI.parse(current_url).query
   actual_params = query ? CGI.parse(query) : {}
   expected_params = {}
-  expected_pairs.rows_hash.each_pair{|k,v| expected_params[k] = v.split(',')} 
-  
+  expected_pairs.rows_hash.each_pair{|k,v| expected_params[k] = v.split(',')}
+
   if actual_params.respond_to? :should
     actual_params.should == expected_params
   else

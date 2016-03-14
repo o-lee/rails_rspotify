@@ -13,7 +13,7 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
-    when /^the (ProjectManager )?home\s?page$/ then '/projects'
+    when /^the (Playlist Curator )?home\s?page$/ then '/projects'
     when /^the projects page$/ then '/projects'
 
     # Add more mappings here.
