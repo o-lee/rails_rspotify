@@ -35,3 +35,77 @@ Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mALTER TABLE "playlist" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
   [1m[35m (5.3ms)[0m  TRUNCATE TABLE "public"."playlist" RESTART IDENTITY CASCADE;
   [1m[36m (0.1ms)[0m  [1mALTER TABLE "playlist" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/projects" for 127.0.0.1 at 2016-03-13 21:53:25 -0600
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 192ms (Views: 190.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ALTER TABLE "playlist" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (1.0ms)[0m  [1m          SELECT schemaname || '.' || tablename
+          FROM pg_tables
+          WHERE
+            tablename !~ '_prt_' AND
+            tablename <> 'schema_migrations' AND
+            schemaname = ANY (current_schemas(false))
+[0m
+  [1m[35m (0.8ms)[0m  select table_name from information_schema.views where table_schema = 'myapp_test'
+  [1m[36m (7.8ms)[0m  [1mTRUNCATE TABLE "public"."playlist" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "playlist" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+Started GET "/projects" for 127.0.0.1 at 2016-03-13 21:53:25 -0600
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "playlist" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (3.8ms)[0m  TRUNCATE TABLE "public"."playlist" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "playlist" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+Started GET "/projects" for 127.0.0.1 at 2016-03-13 21:53:25 -0600
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  ALTER TABLE "playlist" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (4.9ms)[0m  [1mTRUNCATE TABLE "public"."playlist" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "playlist" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+Started GET "/projects" for 127.0.0.1 at 2016-03-13 21:53:26 -0600
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "playlist" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (4.6ms)[0m  TRUNCATE TABLE "public"."playlist" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "playlist" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/projects" for 127.0.0.1 at 2016-03-13 21:53:44 -0600
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 206ms (Views: 204.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ALTER TABLE "playlist" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.9ms)[0m  [1m          SELECT schemaname || '.' || tablename
+          FROM pg_tables
+          WHERE
+            tablename !~ '_prt_' AND
+            tablename <> 'schema_migrations' AND
+            schemaname = ANY (current_schemas(false))
+[0m
+  [1m[35m (0.9ms)[0m  select table_name from information_schema.views where table_schema = 'myapp_test'
+  [1m[36m (5.0ms)[0m  [1mTRUNCATE TABLE "public"."playlist" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "playlist" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+Started GET "/projects" for 127.0.0.1 at 2016-03-13 21:53:44 -0600
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "playlist" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (4.5ms)[0m  TRUNCATE TABLE "public"."playlist" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "playlist" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+Started GET "/projects" for 127.0.0.1 at 2016-03-13 21:53:44 -0600
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ALTER TABLE "playlist" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (6.2ms)[0m  [1mTRUNCATE TABLE "public"."playlist" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "playlist" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+Started GET "/projects" for 127.0.0.1 at 2016-03-13 21:53:44 -0600
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "playlist" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (4.3ms)[0m  TRUNCATE TABLE "public"."playlist" RESTART IDENTITY CASCADE;
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "playlist" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
