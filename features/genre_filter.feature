@@ -7,7 +7,7 @@ Feature: Generate Music by Favorite Genre
   Scenario: generating a playlist by genre without logging in
       Given I am on the Playlist Curator homepage
       Then I should see "Filter by..."
-      When I follow "filter" by "Genre"
+      When I select "Genre" from the Filter by dropdown
       #When I fill in "Run" for "select-playlist"
       And I press "Generate!"
       Then I should see "Playlist generated!"
