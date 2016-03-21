@@ -65,8 +65,7 @@ When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
 end
 
 When /^(?:|I )fill in "([^"]*)" for "([^"]*)"$/ do |value, field|
-
-  fill_in(field, :with => value)
+  find("##{field}").set("#{value}")
 end
 
 # Use this to fill in an entire form with data from a table. Example:
@@ -112,6 +111,12 @@ Then /^(?:|I )should see "([^"]*)"$/ do |text|
   else
     assert page.has_content?(text)
   end
+end
+
+Then /^(?:|I )should see "([^"]*)" in "([^"]*)"$/ do |value, field|
+  page.execute_script %Q{$('#{field}').val('#{value}').keydown()}
+  #fill_in(page.execute_script %Q{$('#{field}').val('#{value}').keydown()}, :with => value)
+  #find("##{field}").set("#{value}")
 end
 
 Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|

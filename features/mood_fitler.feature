@@ -8,6 +8,6 @@ Feature: Generate Music by my Mood
       Given I am on the Playlist Curator homepage
       Then I should see "Filter by..."
       When I select "Emotion" from the Filter by dropdown
-      #When I fill in "Run" for "select-playlist"
+      When I fill in "Sad" for "select-playlist"
       And I press "Generate!"
       Then I should see "Playlist generated!"

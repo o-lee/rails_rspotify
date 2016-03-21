@@ -24,10 +24,10 @@ var listEnum = {
 
 // once the document is ready, do all this stuff
 $(document).ready(function() {
-	
+
 	// setup the autocomplete for the list
 	$("#select-playlist").autocomplete();
-	
+
 	// add the event handler for when the select changes
 	$("#filter").change(function(e) {
 		var option = $(this).val();
@@ -35,12 +35,12 @@ $(document).ready(function() {
 		   // enable to textbox and change the placeholder
 		   $("#select-playlist").prop("disabled", false);
 		   $("#select-playlist").prop("placeholder", listEnum[option].placeholder);
-		   
+
 		   // set the autocomplete source
-		   $("#select-playlist").autocomplete({source: listEnum[option].list});	
+		   $("#select-playlist").autocomplete({source: listEnum[option].list});
 		}
 	});
-	
+
 	// click event for the generate button
 	$("#get-playlist").click(function(e) {
 		$("#dialog").dialog("open");

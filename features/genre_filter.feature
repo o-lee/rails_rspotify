@@ -8,6 +8,6 @@ Feature: Generate Music by Favorite Genre
       Given I am on the Playlist Curator homepage
       Then I should see "Filter by..."
       When I select "Genre" from the Filter by dropdown
-      #When I fill in "Run" for "select-playlist"
+      When I fill in "Rock" for "select-playlist"
       And I press "Generate!"
       Then I should see "Playlist generated!"
