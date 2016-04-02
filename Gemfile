@@ -1,6 +1,7 @@
 ruby '2.2.3'
 source 'http://rubygems.org'
 gem 'rails', '4.2.4'
+gem 'rspotify'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'

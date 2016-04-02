@@ -44,6 +44,8 @@ $(document).ready(function() {
 	// click event for the generate button
 	$("#get-playlist").click(function(e) {
 		$("#dialog").dialog("open");
+		var uri = window.location;
+		location.href = uri + "/playlist/" + $("#select-playlist").val();
 	});
 
   // setup the dialog box
@@ -60,9 +62,4 @@ $(document).ready(function() {
            }
          ]
    });
-	/* We will use this when we get connected to spotify
-	$.get(Curator.url + "/rest/1", function(data) {
-		console.log(data);
-	});
-	*/
 });

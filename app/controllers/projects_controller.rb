@@ -63,6 +63,22 @@ class ProjectsController < ApplicationController
     redirect_to projects_path
   end
   
+  def playlist
+       id = params[:id] # retrieve project task ID from URI route
+       
+       RSpotify.authenticate("70c8eb6616be4e849cc7e035e97f99fc", "a45a56959d9447afb84dd8ceb1ee4ece")
+       
+       party = RSpotify::Category.find(id)
+       categories = RSpotify::Category.list
+       
+       @list = []
+       party.playlists.each do |name|
+          @list.push(name.name)
+       end
+       
+       @songs = party.playlists[0].tracks
+   end
+  
   def task_params
     params.require(:project).permit(:user, :title, :description, :extended_description, :due_date)
   end

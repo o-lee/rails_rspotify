@@ -56,3 +56,7 @@ label[for="filter"] {
 .no-close .ui-dialog-titlebar-close {
     display: none;
 }
+
+#playlist {
+	background-color: white;
+}
