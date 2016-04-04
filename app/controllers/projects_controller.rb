@@ -13,26 +13,7 @@ class ProjectsController < ApplicationController
 
 
   def index
-   sort = params[:sort] || session[:sort]
-    case sort
-    when 'title'
-      ordering, @title_header = {:title => :asc}, 'hilite'
-    when 'date'
-      ordering, @date_header = {:due_date => :asc}, 'hilite'
-    end
-    @all_users = Project.getUsers
-    @selected_users = params[:users] || session[:users] || {}
-    
-    if @selected_users == {}
-      @selected_users = Hash[@all_users.map {|user| [user, user]}]
-    end
-    
-    if params[:sort] != session[:sort] or params[:user] != session[:user]
-      session[:sort] = sort
-      session[:ratings] = @selected_users
-      redirect_to :sort => sort, :users => @selected_users and return
-    end
-    @projects = Project.where(user: @selected_users.keys).order(ordering)
+   
   end
 
   def new
