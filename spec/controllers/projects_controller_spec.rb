@@ -2,8 +2,11 @@ require 'rails_helper'
 
 describe ProjectsController do
   describe 'Searching Spotify' do
+    before :each do
+      @fake_results = mock_model(Project)
+    end
     it 'should call a method that performs Spotify search' do
-      expect(Project).to receive(:find_in_spotify).with('chill')
+      expect(Project).to receive(:playlist).with('chill')
       post :search_spotify, {:search_terms => 'chill'}
     end
 
