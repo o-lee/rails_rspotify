@@ -7,8 +7,8 @@
     %table#playlist
       %thead
         %tr
-          %th{:class=>("hilite" if @sort_column == "title")}= link_to "Name", projects_path(:sort_by=>"title", "users"=>@checked_users), :id=> "title_header"
-          %th{:class=>("hilite" if @sort_column == "due_date")}= link_to "Artist", projects_path(:sort_by=>"due_date", "users"=>@checked_users), :id=> "due_date_header"
+          %th{:class=>("hilite" if @sort_column == "title")}= link_to "Name", projects_path(:sort_by=>"title"), :id=> "title_header"
+          %th{:class=>("hilite" if @sort_column == "due_date")}= link_to "Artist", projects_path(:sort_by=>"due_date"), :id=> "due_date_header"
       %tbody
         - @songs.each do |song|
           %tr
