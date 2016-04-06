@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-
+	
   def show
     id = params[:id] # retrieve project task ID from URI route
     @project = Project.find(id) # look up project task by unique ID
@@ -13,7 +13,7 @@ class ProjectsController < ApplicationController
 
 
   def index
-
+   
   end
 
   def new
