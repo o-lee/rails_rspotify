@@ -1,0 +1,62 @@
+body {
+    font-family: georgia, sans-serif;
+    background: url(color.jpg);
+}
+
+h1 {
+    color: white;
+    font-size: 3.0em;
+    text-align: center;
+}
+h2 {
+    font-size: 2.5em;
+    color: darkblue;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#header {
+    text-align: right;
+}
+
+#filter {
+    display: block;
+    margin: 1.0em auto;
+    font-size: 1.25em;
+}
+
+label[for="filter"] {
+    font-size: 1.15em;
+    margin: 1.0em auto;
+    text-align: center;
+    display: block;
+}
+
+#playlist-pick {
+    background-color: rgba(255, 255, 255, 0.85);
+    width: 65%;
+    margin: 0 auto;
+    padding: 2.0em;
+}
+
+#select-playlist {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    font-size: 1.25em;
+}
+
+#get-playlist {
+    width: 125px;
+    height: 35px;
+    margin: 1.0em auto;
+    display: block;
+}
+
+.no-close .ui-dialog-titlebar-close {
+    display: none;
+}
+
+#playlist {
+	background-color: white;
+}
