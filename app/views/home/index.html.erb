@@ -1,0 +1,23 @@
+<!-- app/views/home/index.html.erb -->
+
+<body>
+  <div id="header">
+    <button onclick="alert('Hello')" type="button">login</button>
+    <button onclick="alert('Hello')" type="button">sign-up</button>
+  </div>
+  <div id="content">
+    <h1 class="title">Welcome to Playlist Curator</h1>
+
+    <div id="playlist-pick">
+    <%= form_tag( {:action => 'routes'}, :multipart => true ) do %>
+      <h2>Let's Get Started</h2>
+      <label for="filter">How do you want to base this playlist?</label>
+      <%= select_tag(:filter, options_for_select([['Mood', 'mood'], ['Artist','artist'], ['Genre','genre'], ['Activity', 'activity']], '4'), {prompt: 'Filter by...'}) %>
+      <input id="select-playlist" type="text"> </input>
+      <input id="get-playlist" type="button" value="Generate!"> </input>
+      <% end %>
+    </div>
+    <div id="dialog">Playlist generated!</div>
+  </div>
+</body>
+
