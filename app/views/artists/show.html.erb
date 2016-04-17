@@ -1,2 +1,30 @@
-<h1>Artists#show</h1>
-<p>Find me in app/views/artists/show.html.erb</p>
+<!-- app/views/artists/show.html.erb -->
+
+<h1 class="page-header"><%= @artist.name %></h1>
+<div id="content">
+  <table id="playlist">
+    <thead>
+      <tr>
+
+        <th>Title</th>
+        <th>Album</th>
+      </tr>
+    </thead>
+
+	<tbody>
+	  <% @artist.albums(country: 'US').each do |album| %>
+	    <% album.tracks.each do |track| %>
+	      <tr>
+	        <td>
+	          <%= track.name %>
+	        </td>
+	        <td>
+	          <%= album.name %>
+	        </td>
+	      </tr>
+	    <% end %>
+	  <% end %>
+	</tbody>
+
+  </table> 
+</div>
