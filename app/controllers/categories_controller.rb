@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   require 'rspotify'
+  
   def index
   end
 

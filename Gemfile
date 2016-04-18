@@ -40,6 +40,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'simplecov', :require => false
   gem 'cucumber-rails'
   gem 'cucumber-rails-training-wheels'
 

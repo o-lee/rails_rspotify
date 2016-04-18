@@ -4,6 +4,12 @@ class ArtistsController < ApplicationController
   end
 
   def show
-  	@artist = RSpotify::Artist.find(params[:id])
+  	unless RSpotify::Artist.find(params[:id])
+  	  flash[:notice] = 'Invalid ID'
+	  redirect_to root_path and return
+  	else
+  	  @artist = RSpotify::Artist.find(params[:id])
+  	end
+  	
   end
 end

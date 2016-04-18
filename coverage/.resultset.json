@@ -1,0 +1,137 @@
+{
+  "Cucumber": {
+    "coverage": {
+      "/home/ensign/assignments/new/project/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/home/ensign/assignments/new/project/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ensign/assignments/new/project/app/helpers/artists_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ensign/assignments/new/project/app/helpers/category_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ensign/assignments/new/project/app/helpers/home_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ensign/assignments/new/project/app/controllers/artists_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        0,
+        0,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/ensign/assignments/new/project/app/controllers/categories_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        2,
+        null,
+        2,
+        null,
+        2,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/ensign/assignments/new/project/app/controllers/home_controller.rb": [
+        1,
+        null,
+        1,
+        4,
+        null,
+        4,
+        0,
+        null,
+        4,
+        null,
+        null,
+        4,
+        null,
+        2,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/ensign/assignments/new/project/app/controllers/rest_controller.rb": [
+        1,
+        1,
+        1,
+        0,
+        null,
+        null,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/ensign/assignments/new/project/app/models/home.rb": [
+        1,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1460956850
+  }
+}
