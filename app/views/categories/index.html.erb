@@ -1,0 +1,10 @@
+<!-- app/views/artists/index.html.erb -->
+
+<h1 class="page-header">Category List</h1>
+ <ul>
+   <% RSpotify::Category.list.each do |category|  %>
+     <li>
+       <%= category %>
+     </li>
+   <% end %>
+ </ul>

@@ -1,9 +1,6 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
-
 // this sets up a new namespace so we don't pollute the global
 var Curator = {
-	url: (window.location.href).replace("/projects", "")
+	url: (window.location.href).replace("/", "")
 };
 
 var listEnum = {

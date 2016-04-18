@@ -58,5 +58,11 @@ label[for="filter"] {
 }
 
 #playlist {
-	background-color: white;
+    background-color: white;
 }
+
+.ui-autocomplete {
+    max-height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}   
