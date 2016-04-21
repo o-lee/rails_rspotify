@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/categories', to: 'categories#index'
+  #get '/categories', to: 'categories#index'
 
   get '/categories/:id', to:'categories#show', as: 'category'
 
@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/artists/:id', to:'artists#show', as: 'artist'
   
   get '/home', to:'home#show', as: 'home'
+  get '/home/artists/:id', to: 'home#artists'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

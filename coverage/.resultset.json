@@ -42,17 +42,14 @@
         null
       ],
       "/home/ensign/assignments/new/project/app/controllers/categories_controller.rb": [
-        1,
-        1,
         null,
         1,
-        null,
         null,
         1,
         2,
         null,
         2,
-        null,
+        2,
         2,
         0,
         null,
@@ -95,6 +92,16 @@
         0,
         null,
         null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
         null
       ],
       "/home/ensign/assignments/new/project/app/controllers/rest_controller.rb": [
@@ -103,7 +110,7 @@
         1,
         0,
         null,
-        null,
+        0,
         null,
         0,
         0,
@@ -132,6 +139,6 @@
         null
       ]
     },
-    "timestamp": 1460956850
+    "timestamp": 1461268220
   }
 }

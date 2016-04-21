@@ -6,7 +6,7 @@ gem 'rails', '4.2.4'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use Spotify wrapper for rails
-gem 'rspotify'
+gem 'rspotify', '~> 1.18'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

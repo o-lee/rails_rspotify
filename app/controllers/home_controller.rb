@@ -26,4 +26,14 @@ class HomeController < ApplicationController
  	  	redirect_to root_path and return
  	  end
 	end
+
+	def artists
+        id = params[:id]
+		artists = RSpotify::Artist.search("#{id}*", limit: 20, market: 'US')
+		list = []
+		artists.each do |artist|
+		   list.push(artist.name)
+		end
+		render json: list
+   end
 end
