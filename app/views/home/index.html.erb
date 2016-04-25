@@ -1,17 +1,13 @@
 <!-- app/views/home/index.html.erb -->
 
 <body>
-  <div id="header">
-    <button onclick="alert('Hello')" type="button">login</button>
-    <button onclick="alert('Hello')" type="button">sign-up</button>
-  </div>
+  
   <div id="content">
     <p id="notice"><%= flash[:notice] %></p>
-    <h1 class="title">Welcome to Playlist Curator</h1>
 
     <div id="playlist-pick">
     <%= form_tag home_path, :method => "get" do %>
-      <h2>Let's Get Started</h2>
+      <h1>Let's Get Started</h1>
       <label for="filter">How do you want to base this playlist?</label>
       <%= select_tag( :filter, options_for_select(Home::Filters), {prompt: 'Filter by...'}) %>
       <%= text_field_tag(:search_value, nil, {placeholder:'Search for...', id: "select-playlist", disabled: true}) %>

@@ -1,34 +1,41 @@
 <!-- app/views/artists/show.html.erb -->
+<body>
+<div class="page-wrapper"id="content">
+  <div class="main supporting" role="main">
+	<div class="playlist">
+	  <h2><%= @artist.name %></h2>
+	  <%= render 'album_view' %>
+	</div>
 
-<div id="header">
-    <button onclick="alert('Hello')" type="button">login</button>
-    <button onclick="alert('Hello')" type="button">sign-up</button>
+	<footer>
+      <a href="https://github.com/UCCS-CS3300-Spring2016/Group3" class="zen-github">Home</a>
+	  <a href="http://https://www.spotify.com/" title="Spotify" class="zen-validate-html">Spotify</a>
+	  <a href="https://github.com/UCCS-CS3300-Spring2016/Group3" class="zen-github">GitHub</a>
+	</footer>
+  </div>
+
+  <aside class="sidebar" role="complementary">
+		<div class="wrapper">
+
+			<div class="design-selection" id="design-selection">
+
+				<nav role="navigation">
+					<ul>
+					<li><h3>Group By:</h3></li>
+					<li>
+						<a href="/221/" class="design-name">Album</a>
+					</li>					
+					<li>
+						<a href="/220/" class="design-name">Genre</a> 
+					</li>					
+					<li>
+						<a href="/219/" class="design-name">None</a>
+					</li>	
+					</ul>
+				</nav>
+			</div>
+
+			
+	</aside>
 </div>
-<div id="content">
-  <h1><%= @artist.name %></h1>
-  <table id="playlist">
-    <thead>
-      <tr>
-
-        <th>Title</th>
-        <th>Album</th>
-      </tr>
-    </thead>
-
-	<tbody>
-	  <% @artist.albums(country: 'US').each do |album| %>
-	    <% album.tracks.each do |track| %>
-	      <tr>
-	        <td>
-	          <%= track.name %>
-	        </td>
-	        <td>
-	          <%= album.name %>
-	        </td>
-	      </tr>
-	    <% end %>
-	  <% end %>
-	</tbody>
-
-  </table> 
-</div>
+</body>

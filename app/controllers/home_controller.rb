@@ -25,6 +25,7 @@ class HomeController < ApplicationController
  	  else
  	  	redirect_to root_path and return
  	  end
+ 	  
 	end
 
 	def artists

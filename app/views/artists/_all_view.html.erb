@@ -1,0 +1,29 @@
+<table>
+	<thead>
+	  <tr>
+	    <th>Title</th>
+	    <th>Duration</th>
+	    <th>Album</th>
+      </tr>
+	</thead>
+
+	<tbody>
+      <% @artist.albums(country: 'US').each do |album| %>
+	  <% album.tracks.each do |track| %>
+	  <tr>	        
+	    <td>
+		  <%= track.name %>
+		</td>
+		<td>
+		  <%= track.duration_ms %> 
+		</td>
+		<td>
+		  <%= album.name %>
+		</td>
+		
+		      
+	  </tr>
+	  <% end %>
+	  <% end %>
+	</tbody>
+</table> 

@@ -1,0 +1,10 @@
+<% @artist.albums(country: 'US').each do |album| %>
+ <h3><%= album.name %></h3>
+ <ul>
+   <% album.tracks.each do |track| %>
+     <li>
+       <%= track.name %>
+     </li>
+   <% end %>
+ </ul>
+<% end %>
