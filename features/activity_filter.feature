@@ -8,11 +8,11 @@ Feature: Generate Music by Favorite Activity
       Given I am on the Playlist Curator homepage
       Then I should see "Filter by..."
       When I select "Activity" from the Filter by dropdown
-      And I fill in "Study" for "select-playlist"
+      And I fill in "Workout" for "select-playlist"
       And I press "Generate!"
 
       # 3-0 features
-      And I should see "Study Focus" 
+      And I should see "Work from Home" 
       And I should not see "Metallica" 
 
   Scenario: mood keyword not recognized by Spotify (sad)
