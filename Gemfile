@@ -43,7 +43,7 @@ group :test do
   gem 'simplecov', :require => false
   gem 'cucumber-rails'
   gem 'cucumber-rails-training-wheels'
-
+  gem 'selenium-webdriver'
   gem 'guard'
   gem 'guard-cucumber'
   gem 'guard-rspec'

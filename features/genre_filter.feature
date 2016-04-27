@@ -8,18 +8,18 @@ Feature: Generate Music by Favorite Genre
       Given I am on the Playlist Curator homepage
       Then I should see "Filter by..."
       When I select "Genre" from the Filter by dropdown
-      When I fill in "Funk" for "select-playlist"
+      When I fill in "Rock" for "select-playlist"
       And I press "Generate!"
+      Then I should be on the genres page
+      And I should not see "Invalid ID"
 
 
-      # 3-0 features
-      And I should see "James Brown" 
-      And I should not see "Metallica" 
 
   Scenario: mood keyword not recognized by Spotify (sad)
       Given I am on the Playlist Curator homepage
       Then I should see "Filter by..."
       When I select "Genre" from the Filter by dropdown
       When I fill in "Bucket Drums" for "select-playlist"
-      #Then I should see "Playlist for Bucket Drums does not exist under genre"
-      And I should be on the Playlist Curator homepage
+      And I press "Generate"
+      Then I should be on the Playlist Curator homepage
+      And I should see "Invalid ID"

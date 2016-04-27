@@ -13,8 +13,12 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
-    when /^the (Playlist Curator )?home\s?page$/ then '/'
-    when /^the projects page$/ then '/'
+      when /^the (Playlist Curator )?home\s?page$/ then '/'
+      when /^the projects page$/ then '/'
+      when /^the genres page$/ then '/categories/Rock'
+      when /^the artists page$/ then '/artists/0oSGxfWSnnOXhD2fKuz2Gy'
+      when /^the activities page$/ then '/categories/Workout'
+
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

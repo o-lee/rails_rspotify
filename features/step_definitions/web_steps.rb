@@ -245,6 +245,15 @@ Then /^(?:|I )should be on (.+)$/ do |page_name|
   end
 end
 
+Then /^(?:|I )should be on (.+)$ for (.+)/ do |page_name, id|
+  current_path = URI.parse(current_url).path
+  if current_path.respond_to? :should
+    current_path.should == path_to(page_name)
+  else
+    assert_equal path_to(page_name), current_path
+  end
+end
+
 Then /^(?:|I )should have the following query string:$/ do |expected_pairs|
   query = URI.parse(current_url).query
   actual_params = query ? CGI.parse(query) : {}
@@ -260,4 +269,8 @@ end
 
 Then /^show me the page$/ do
   save_and_open_page
+end
+
+Then /^I wait for (\d+) seconds?$/ do |n|
+  sleep(n.to_i)
 end
