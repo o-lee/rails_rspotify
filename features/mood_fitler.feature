@@ -18,5 +18,5 @@ Feature: Generate Music by my Mood
       When I select "Mood" from the Filter by dropdown
       When I fill in "Grumpy" for "select-playlist"
       And I press "Generate"
-      Then I should see "Invalid ID"
+      Then I should see "Invalid Search Parameters"
       And I should be on the Playlist Curator homepage

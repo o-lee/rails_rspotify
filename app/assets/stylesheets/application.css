@@ -75,6 +75,11 @@ a:focus  {
     background: #B2CF42;
     color: #FFF;
 }
+.message {
+    font-size: 1.5em;
+    background: rgba(240, 240, 240, .7);
+    text-align: center;
+}
 
 .playlist {
     background: rgba(185, 185, 185, .85);

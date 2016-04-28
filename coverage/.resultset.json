@@ -1,7 +1,7 @@
 {
   "Cucumber": {
     "coverage": {
-      "/home/ensign/playground/playlistr4_25/app/controllers/application_controller.rb": [
+      "/home/ensign/assignments/new/project/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -16,28 +16,24 @@
         null,
         null
       ],
-      "/home/ensign/playground/playlistr4_25/app/helpers/application_helper.rb": [
+      "/home/ensign/assignments/new/project/app/helpers/application_helper.rb": [
         1,
         null,
         null
       ],
-      "/home/ensign/playground/playlistr4_25/app/helpers/artists_helper.rb": [
+      "/home/ensign/assignments/new/project/app/helpers/artists_helper.rb": [
         1,
         null
       ],
-      "/home/ensign/playground/playlistr4_25/app/helpers/category_helper.rb": [
+      "/home/ensign/assignments/new/project/app/helpers/category_helper.rb": [
         1,
         null
       ],
-      "/home/ensign/playground/playlistr4_25/app/helpers/genre_helper.rb": [
+      "/home/ensign/assignments/new/project/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/home/ensign/playground/playlistr4_25/app/helpers/home_helper.rb": [
-        1,
-        null
-      ],
-      "/home/ensign/playground/playlistr4_25/app/controllers/artists_controller.rb": [
+      "/home/ensign/assignments/new/project/app/controllers/artists_controller.rb": [
         1,
         1,
         null,
@@ -54,7 +50,7 @@
         null,
         null
       ],
-      "/home/ensign/playground/playlistr4_25/app/controllers/categories_controller.rb": [
+      "/home/ensign/assignments/new/project/app/controllers/categories_controller.rb": [
         1,
         null,
         1,
@@ -62,6 +58,7 @@
         6,
         6,
         6,
+        null,
         6,
         4,
         4,
@@ -87,16 +84,7 @@
         null,
         null
       ],
-      "/home/ensign/playground/playlistr4_25/app/controllers/genre_controller.rb": [
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null
-      ],
-      "/home/ensign/playground/playlistr4_25/app/controllers/home_controller.rb": [
+      "/home/ensign/assignments/new/project/app/controllers/home_controller.rb": [
         1,
         null,
         1,
@@ -113,6 +101,7 @@
         6,
         null,
         2,
+        null,
         2,
         1,
         1,
@@ -138,13 +127,13 @@
         null,
         null
       ],
-      "/home/ensign/playground/playlistr4_25/app/models/home.rb": [
+      "/home/ensign/assignments/new/project/app/models/home.rb": [
         1,
         1,
         null
       ]
     },
-    "timestamp": 1461717673
+    "timestamp": 1461815018
   },
   "RSpec": {
     "coverage": {

@@ -5,8 +5,9 @@ class CategoriesController < ApplicationController
     @category = params[:id] # retrieve project task ID from URI route
   	id = @category.downcase
     choices = ["toplists","mood","party","workout","pop","popculture", "focus", "rock","edm_dance", "chill","dinner", "sleep","hiphop","rnb", "country","folk_americana","metal","soul", "travel" ]
+    
     if !choices.include?(id)
-      flash[:notice] = 'Invalid ID'
+      flash[:notice] = 'Invalid Search Parameters'
       redirect_to root_path and return
     else
 

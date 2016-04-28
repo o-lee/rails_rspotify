@@ -11,7 +11,7 @@ Feature: Generate Music by Favorite Genre
       When I fill in "Rock" for "select-playlist"
       And I press "Generate!"
       Then I should be on the genres page
-      And I should not see "Invalid ID"
+      And I should not see "Invalid Search Parameters"
 
 
 
@@ -22,4 +22,4 @@ Feature: Generate Music by Favorite Genre
       When I fill in "Bucket Drums" for "select-playlist"
       And I press "Generate"
       Then I should be on the Playlist Curator homepage
-      And I should see "Invalid ID"
+      And I should see "Invalid Search Parameters"

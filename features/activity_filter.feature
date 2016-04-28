@@ -12,7 +12,7 @@ Feature: Generate Music by Favorite Activity
       And I fill in "Workout" for "select-playlist"
       And I press "Generate!"
       Then I should be on the activities page
-      And I should not see "Invalid ID"
+      And I should not see "Invalid Search Parameters"
 
 
 
@@ -23,4 +23,4 @@ Feature: Generate Music by Favorite Activity
       When I fill in "Golf" for "select-playlist"
       And I press "Generate!"
       Then I should be on the Playlist Curator homepage
-      And I should see "Invalid ID"
+      And I should see "Invalid Search Parameters"
